@@ -53,8 +53,11 @@ class MainWindow(QMainWindow):
         imgProcess.triggered.connect(lambda: self.menuClicked("imageProcessing"))
         imgMenu.addAction(imgProcess)
 
-        PDFImgMenu = menuBar.addMenu("PDF图像")
-        PDFImgMenu.aboutToShow.connect(lambda: self.menuClicked("PDFImage"))
+        fileMenu = QAction("PDF图像", self)
+        fileMenu.triggered.connect(lambda: self.menuClicked("PDFImage"))
+        menuBar.addAction(fileMenu)
+        # PDFImgMenu = menuBar.addMenu("PDF图像")
+        # PDFImgMenu.aboutToShow.connect(lambda: self.menuClicked("PDFImage"))
 
         imgCrawlerMenu = menuBar.addMenu("网络爬虫")
 

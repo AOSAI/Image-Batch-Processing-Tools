@@ -149,7 +149,7 @@ class ToImages(QWidget):
 
     def startSplit(self):
         if len(self.pdf_list) == 0 or self.outputPath.text() == "":
-            QMessageBox.warning(self, "警告", "您还未选择需要压缩的文件或未指定输出目录")
+            QMessageBox.warning(self, "警告", "您还未选择需要拆分的PDF文件或未指定输出目录")
 
         self.signal.new_progress.emit(0, len(self.pdf_list))
         step = 0
